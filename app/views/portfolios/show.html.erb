@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @portfolio.main_image %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @portfolio.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @portfolio.subtitle %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @portfolio.body %>
+</p>
+
+<%= link_to 'Edit', edit_blog_path(@portfolio) %> |
+<%= link_to 'Back', portfolios_path %>
+<%= link_to 'Destroy', portfolio_path(@portfolio), method: :delete, data: { confirm: 'Are you sure?' } %>
+<%#= link_to 'Delete portfolio',portfolio_path(@portfolio), method: :delete%>
+
+<%#= link_to 'Destroy',  post,  method: :delete, data: { confirm: 'Are you sure?' } %>
+

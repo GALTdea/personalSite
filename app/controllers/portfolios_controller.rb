@@ -1,9 +1,60 @@
 class PortfoliosController < ApplicationController
 
   def index
-    @portfolio_items = Portfolio.all
+    @portfolios = Portfolio.all
+  end
+
+  def new
+    @portfolio = Portfolio.new
+  end
+
+  def create
+    @portfolio = Portfolio.create(portfolio_params)
+      if @portfolio.save
+        redirect_to portfolios_path , notice: 'Your portfolio item is now live!'
+      else
+        render 'new'
+      end
   end
 
   def show
+    @portfolio = Portfolio.find(params[:id])
   end
+
+  def edit
+     @portfolio = Portfolio.find(params[:id])
+  end
+
+  def update
+    @portfolio = Portfolio.find(params[:id])
+    if @portfolio.update(portfolio_params)
+      redirect_to @portfolio, notice: 'Your Portfolio item was updated'
+      else
+        render 'edit'
+    end
+  end
+
+
+  def destroy
+    @portfolio = Portfolio.find(params[:id])
+      if @portfolio.destroy
+         redirect_to portfolios_path, notice: 'Portfolio item deleted'
+      end
+  end
+
+
+
+
+private
+
+def portfolio_params
+  params.require(:portfolio).permit(:title, :subtitle, :body)
+end
+
+end
+
+
+def portfolio_params
+  params.require(:portfolio).permit(:title, :subtitle, :body)
+
 end
