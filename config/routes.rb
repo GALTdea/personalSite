@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :portfolios, except: [:show]
   # the as: generates a url helper in this cas portolio_show_path
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
+  get 'angular-items', to: 'portfolios#angular'
 
   resources :blogs do
     member do

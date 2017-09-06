@@ -1,4 +1,7 @@
 class Blog < ApplicationRecord
+
+  belongs_to :topic
+
   # this allows us to crate a draft and
   enum status: {draft: 0, published: 1}
 
