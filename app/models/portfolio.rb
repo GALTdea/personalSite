@@ -1,8 +1,16 @@
 class Portfolio < ApplicationRecord
   include Placeholder
-  validates_presence_of :title, :body, :main_image, :thumb_image
-
   has_many :technologies
+  # this helper, allows us to create technology objects fromt he paretnt object, in this case is portfolio
+  accepts_nested_attributes_for :technologies,
+                                            # verifies that attribute name was filled
+                                            reject_if: lambda { |attrs| attrs['name'].blank?}
+                                            # reject_if: lambda { |attrs| attrs['name'].blank? }
+
+
+
+
+  validates_presence_of :title, :body, :main_image, :thumb_image
 
   #basic custome scope
   # 2 ways
