@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'friendly_id', '~> 5.1'
 
+gem 'devise', '~> 4.2'
 
 
 
