@@ -32,12 +32,13 @@ layout 'portfolio'
 
   def edit
      @portfolio = Portfolio.find(params[:id])
+
   end
 
   def update
     @portfolio = Portfolio.find(params[:id])
     if @portfolio.update(portfolio_params)
-      redirect_to @portfolio, notice: 'Your Portfolio item was updated'
+      redirect_to portfolio_show_path, notice: 'Your Portfolio item was updated'
       else
         render 'edit'
     end
