@@ -39,7 +39,7 @@ gem 'friendly_id', '~> 5.1'
 
 gem 'devise', '~> 4.2'
 
-
+gem 'bootstrap', '~> 4.0.0.beta'
 
 
 group :development, :test do
