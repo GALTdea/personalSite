@@ -41,6 +41,8 @@ gem 'devise', '~> 4.2'
 
 gem 'bootstrap', '~> 4.0.0.beta'
 
+gem 'personal_site_view_tool', git: 'https://github.com/GALTdea/personal_site_view_tool'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

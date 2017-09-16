@@ -23,5 +23,10 @@ module ApplicationHelper
      end
   end
 
+  #basic helpers like this, should go here instead of making a concern
+  def copyright_generator
+   PersonalSiteViewTool::Renderer.copyright 'Gustavo Valenzuela', 'All rights reserved.'
+  end
+
 
 end
