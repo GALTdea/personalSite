@@ -25,9 +25,9 @@
     <p><%= t.name %></p>
 <% end %>
 
-<%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
+<%= link_to 'Edit', edit_portfolio_path(@portfolio) if logged_in?(:site_admin) %> |
 <%= link_to 'Back', portfolios_path %>
-<%= link_to 'Destroy', portfolio_show_path(@portfolio), method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Destroy', portfolio_show_path(@portfolio), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin)%>
 <%#= link_to 'Delete portfolio',portfolio_path(@portfolio), method: :delete%>
 
 <%#= link_to 'Destroy',  post,  method: :delete, data: { confirm: 'Are you sure?' } %>

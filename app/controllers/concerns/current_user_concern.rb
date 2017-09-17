@@ -8,14 +8,17 @@ module CurrentUserConcern
   # super gets all the data from from the original current_user method
   # if current user doen't not exit || guess_user
   def current_user
-    super || guess_user
+    super || guest
   end
 
-  def guess_user
-    OpenStruct.new(name: 'Guess User',
-                  first_name: 'Guess',
-                  last_name: 'User',
-                  email: 'guess@example.com' )
+  #last item in the method gest returend so we wan to place the object at the end
+  def guest
+    guest = GuestUser.new
+    guest.name = "Guest User"
+    guest.first_name = "Guest"
+    guest.last_name = "User"
+    guest.email = "guest@example.com"
+    guest
   end
 end
 
