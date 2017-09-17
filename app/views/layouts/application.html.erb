@@ -18,9 +18,8 @@
       <div class="site-wrapper-inner">
         <div class="cover-container">
           <%= render 'shared/application_nav'%>
-          <%= log_in_helper %>
           <%= yield %>
-          <%= copyright_generator %>
+          <%= render 'shared/application_footer' %>
           <%= source_helper("application") %>
         </div>
       </div>
