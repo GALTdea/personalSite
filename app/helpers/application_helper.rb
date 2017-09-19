@@ -10,6 +10,17 @@ module ApplicationHelper
       end
   end
 
+  def nav_generator style, tag_type
+nav_links = <<NAV
+<#{tag_type}><a href="#{root_path}" class= #{style}> Home </#{tag_type}>
+<#{tag_type}><a href="#{about_me_path}" class= #{style} > About me </#{tag_type}>
+<#{tag_type}><a href="#{contact_path}" class= #{style} > Contact </#{tag_type}>
+<#{tag_type}><a href="#{blogs_path}" class= #{style} > Blog </#{tag_type}>
+<#{tag_type}><a href="#{portfolios_path}" class= #{style} > Portfolio </#{tag_type}>
+NAV
+
+nav_links.html_safe
+  end
 
 
   def sample_helper
@@ -31,3 +42,5 @@ module ApplicationHelper
 
 
 end
+
+
