@@ -41,6 +41,7 @@ gem 'devise', '~> 4.2'
 
 gem 'bootstrap', '~> 4.0.0.beta'
 
+
 gem 'personal_site_view_tool', git: 'https://github.com/GALTdea/personal_site_view_tool'
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
