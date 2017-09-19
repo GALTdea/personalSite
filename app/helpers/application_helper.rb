@@ -12,11 +12,11 @@ module ApplicationHelper
 
   def nav_generator style, tag_type
 nav_links = <<NAV
-<#{tag_type}><a href="#{root_path}" class= #{style}> Home </#{tag_type}>
-<#{tag_type}><a href="#{about_me_path}" class= #{style} > About me </#{tag_type}>
-<#{tag_type}><a href="#{contact_path}" class= #{style} > Contact </#{tag_type}>
-<#{tag_type}><a href="#{blogs_path}" class= #{style} > Blog </#{tag_type}>
-<#{tag_type}><a href="#{portfolios_path}" class= #{style} > Portfolio </#{tag_type}>
+<#{tag_type}><a href="#{root_path}" class="#{style} #{active? root_path} " > Home </#{tag_type}>
+<#{tag_type}><a href="#{about_me_path}" class="#{style} #{active? about_me_path}"  > About me </#{tag_type}>
+<#{tag_type}><a href="#{contact_path}" class= "#{style} #{active? contact_path} " > Contact </#{tag_type}>
+<#{tag_type}><a href="#{blogs_path}" class= "#{style} #{active? blogs_path} "> Blog </#{tag_type}>
+<#{tag_type}><a href="#{portfolios_path}" class= #{style} #{active? portfolios_path} " > Portfolio </#{tag_type}>
 NAV
 
 nav_links.html_safe
@@ -40,6 +40,10 @@ nav_links.html_safe
    PersonalSiteViewTool::Renderer.copyright 'Gustavo Valenzuela', 'All rights reserved.'
   end
 
+
+  def active? path
+    "active" if current_page? path
+  end
 
 end
 
