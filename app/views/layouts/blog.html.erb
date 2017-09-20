@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>Gustavo's Site</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,15 +12,22 @@
   </head>
 
   <body>
-     <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
+    <%= render 'shared/blog_nav' %>
 
-     <%= log_in_helper %>
+    <%= render 'shared/blog_masthead' %>
 
-    <%= yield %>
+    <!-- start of container and row elements -->
 
-    <%= render 'shared/nav', location: 'bottom' %>
+    <div class="container">
+      <div class="row">
+        <%= yield %>
+        <%= render 'shared/blog_side_bar' %>
+      </div>
 
-    <%= source_helper("blog") %>
+        <%= render 'shared/blog_footer' %>
+
+        <%= source_helper("blog") %>
+      </div>
+    </div>
   </body>
 </html>

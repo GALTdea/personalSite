@@ -41,8 +41,14 @@ gem 'devise', '~> 4.2'
 
 gem 'bootstrap', '~> 4.0.0.beta'
 
+
 gem 'personal_site_view_tool', git: 'https://github.com/GALTdea/personal_site_view_tool'
 
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+
+gem 'kaminari', '~> 1.0', '>= 1.0.1'
+
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
