@@ -4,6 +4,7 @@ class Portfolio < ApplicationRecord
   # this helper, allows us to create technology objects fromt he paretnt object, in this case is portfolio
   accepts_nested_attributes_for :technologies,
                                             # verifies that attribute name was filled
+                                            allow_destroy: true,
                                             reject_if: lambda { |attrs| attrs['name'].blank?}
                                             # reject_if: lambda { |attrs| attrs['name'].blank? }
 
