@@ -62,6 +62,7 @@ gem 'cocoon', '~> 1.2', '>= 1.2.10'
 
 gem 'gritter', '~> 1.2'
 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -83,3 +84,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #uthorization gem
 gem 'petergate', '~> 1.7', '>= 1.7.5'
+
+
+
+gem 'twitter', '~> 6.1'
