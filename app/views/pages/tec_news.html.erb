@@ -1,0 +1,17 @@
+<%#= @twitts.inspect %>
+<div class="inner cover">
+  <h1 class="cover-heading">Tec News of The Day</h1>
+
+  <div class="row">
+    <% @twitts.each do |t| %>
+      <div class="col-md-6">
+        <div class="tec-news">
+          <div class="card">
+            <%= t %>
+           </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
