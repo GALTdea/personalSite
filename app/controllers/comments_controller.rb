@@ -11,6 +11,6 @@ private
 
 def comment_param
   params.require(:comments).permit(:content)
-
+end
 
 end
