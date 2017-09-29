@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :set_side_bar_topics, except: [:create, :update, :destroy, :toggle_status]
   #sets the css layout  according to whatever we chose,
   layout 'blog'
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
@@ -100,4 +101,11 @@ class BlogsController < ApplicationController
     def blog_params
       params.require(:blog).permit(:title, :body, :topic_id)
     end
+
+    def set_side_bar_topics
+      @side_bar_topics = Topic.with_blogs
+    end
+
+
+
 end
