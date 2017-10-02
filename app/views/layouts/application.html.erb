@@ -7,7 +7,7 @@
     <title> <%= @page_title %> </title>
     <%= csrf_meta_tags %>
 
-    <%= favicon_link_tag 'favicon.ico' %>
+    <%= favicon_link_tag 'favicon1.ico' %>
 
     <meta name="keywords" content= "<%=  @seo_keywords %>" />
 
@@ -19,7 +19,17 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-          <div id='background'></div>
+          <!-- <div id='background'></div> -->
+          <%= video_tag(
+              'Love-Coding.mp4',
+              id: 'background',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              poster: 'Love-Coding.mp4'
+            )
+            %>
+
           <%= render 'shared/application_nav'%>
 
           <%= yield %>
@@ -27,8 +37,6 @@
           <%= render 'shared/application_footer' %>
 
           <%= alerts %>
-
-
         </div>
       </div>
     </div>
