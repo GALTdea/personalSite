@@ -5,6 +5,23 @@
     <div class="row">
       <div class="col-md-4">
         <%= image_tag "https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/13686723_10153623615511126_291146008017259680_n.jpg?oh=70b4e66bb1c1291baefe1a94e46dd5dc&oe=5A485282", width: '300' %>
+
+        <div class="skills">
+          <% @skills.each do |s| %>
+          <div class="skill">
+            <h4><%= s.title %></h4>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped bg-warning"
+                role="progressbar"
+                aria-valuenow="<%= s.percent_utilized %>"
+                aria-valuemax="100"
+                style="width: <%= s.percent_utilized %>%"
+              ></div>
+            </div>
+          </div>
+          <% end %>
+        </div>
       </div>
       <div class="col-md-8">
          <p class="about-text">
