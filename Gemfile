@@ -99,3 +99,5 @@ gem 'petergate', '~> 1.7', '>= 1.7.5'
 
 
 gem 'twitter', '~> 6.1'
+
+ruby '2.3.1'
