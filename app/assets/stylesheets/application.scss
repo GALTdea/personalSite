@@ -28,9 +28,13 @@ a:hover {
  * Base structure
  */
 
+/*font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto Slab', serif;
+*/
 html,
 body {
   height: 100%;
+  font-family: 'Open Sans', sans-serif;
   /*background-color: #333;*/
 }
 body {
@@ -192,6 +196,8 @@ body {
 }
 
 
+
+
 #background {
   position: fixed;
   top: 50%;
@@ -203,10 +209,9 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('little_g.jpg') no-repeat;
+  background: image-url('home_bg.png') no-repeat;
   background-size: cover;
 }
-
 
 
 .app-fotter {
@@ -217,9 +222,26 @@ body {
 
 
 
+.app-card-container{
+  color: black;
+  text-align: left;
+  margin-left: 1rem;
+}
 
+.about-text {
+  margin-left: 1.5rem;
+}
 
+.app-card-container .card {
+  padding: 20px;
+}
 
+#contact-info {
+  text-align: center;
+}
 
+.skill{
+  margin-top: 10px;
+  margin-buttom: 10px;
 
-
+}

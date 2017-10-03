@@ -42,6 +42,7 @@ gem 'devise', '~> 4.2'
 gem 'bootstrap', '~> 4.0.0.beta'
 
 
+
 gem 'personal_site_view_tool', git: 'https://github.com/GALTdea/personal_site_view_tool'
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
@@ -63,6 +64,13 @@ gem 'cocoon', '~> 1.2', '>= 1.2.10'
 gem 'gritter', '~> 1.2'
 
 gem 'redis', '~> 4.0.0.rc1'
+
+gem 'redcarpet', '~> 3.4'
+
+
+gem 'coderay', '~> 1.1.2.rc1'
+
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 
 
 group :development, :test do
@@ -86,6 +94,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #uthorization gem
 gem 'petergate', '~> 1.7', '>= 1.7.5'
+
 
 
 
